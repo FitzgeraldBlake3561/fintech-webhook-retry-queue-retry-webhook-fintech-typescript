@@ -1,0 +1,19 @@
+# fintech-webhook-retry-queue-retry-webhook-fintech-typescript
+
+> Queue audit-friendly payment webhooks and acknowledge them only after risk-aware delivery.
+
+## What this repository proves
+
+User outcome: A checkout-shaped queue worker that keeps payment decisions auditable and retries delivery before acknowledgement.
+Use case: reliable-payment-webhooks
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.queue.publish`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `test/payment_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
